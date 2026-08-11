@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>sallysbirthday</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;900&family=Cinzel+Decorative:wght@700;900&family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<canvas id="embers"></canvas>
+
+<!-- ============ INTRO GATE ============ -->
+<div id="gate">
+  <div class="gate-inner">
+    <p class="gate-eyebrow">A raven has arrived bearing word from</p>
+    <h1 class="gate-house" id="gate-house">House Stormheart</h1>
+    <div class="sigil" aria-hidden="true">
+      <svg viewBox="0 0 100 100">
+        <path d="M50 6 C 30 20, 20 35, 22 52 C 12 48, 6 38, 6 38 C 6 55, 18 68, 32 70 C 24 76, 12 76, 12 76 C 26 90, 48 90, 58 78 C 66 88, 82 86, 90 74 C 78 74, 72 66, 72 66 C 84 60, 90 46, 84 32 C 80 42, 70 46, 62 44 C 68 30, 64 14, 50 6 Z" />
+      </svg>
+    </div>
+    <button id="gate-btn" class="btn-seal">
+      <span>Enter the Realm,Your grace</span>
+    </button>
+  </div>
+</div>
+
+<!-- ============ MAIN CONTENT ============ -->
+<main id="realm">
+
+  <!-- HERO -->
+  <header class="hero">
+    <p class="eyebrow" id="hero-eyebrow">Nameday Proclamation</p>
+    <h1 class="hero-title">
+      A Song for <span id="hero-name">Val</span>
+    </h1>
+    <p class="hero-words" id="hero-words">Amazing. Demure. Unbowed.</p>
+    <div class="divider"><span></span><i>❖</i><span></span></div>
+    <p class="hero-sub" id="hero-sub">
+      Years bound by fire and loyalty, truer than any oath sworn before a heart tree.
+    </p>
+    <div class="hero-scroll-cue">
+      <span>Read on</span>
+      <div class="arrow"></div>
+    </div>
+  </header>
+
+  <!-- SMALL COUNCIL / PHOTOS -->
+  <section class="council" id="council">
+    <p class="section-eyebrow">Convened this day</p>
+    <h2 class="section-title">The Small Council Remembers</h2>
+    <p class="section-sub">Turn each card. Every one holds a memory.</p>
+
+    <div class="council-grid" id="council-grid">
+      <!-- cards injected by script.js -->
+    </div>
+  </section>
+
+  <!-- RAVEN'S SCROLL / LETTER -->
+  <section class="raven" id="raven">
+    <p class="section-eyebrow">By raven, sealed in wax</p>
+    <h2 class="section-title">A Scroll for You Alone</h2>
+
+    <div class="scroll-wrap">
+      <button id="seal" class="wax-seal" aria-label="Break the seal to read the letter">
+        <span class="seal-crack seal-crack-l"></span>
+        <span class="seal-crack seal-crack-r"></span>
+        <span class="seal-glyph">✦</span>
+      </button>
+
+      <div class="scroll" id="scroll">
+        <div class="scroll-content">
+          <p class="scroll-salutation" id="letter-body"></p>
+          <p class="scroll-sign" id="letter-sign"></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- BARD'S CORNER / MUSIC -->
+  <section class="bard" id="bard">
+    <p class="section-eyebrow">From the gallery</p>
+    <h2 class="section-title">The Bard's Corner</h2>
+    <p class="section-sub">A song for every turn of the page.</p>
+
+    <ul class="track-list" id="track-list">
+      <!-- tracks injected by script.js -->
+    </ul>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-sigil">🐉</div>
+    <p class="footer-line">Written and sealed on her nameday</p>
+    <p class="footer-sign" id="footer-sign">by Your Name, ever loyal</p>
+    <p class="footer-fine">Winter can wait. Today, we feast.</p>
+  </footer>
+
+</main>
+
+<!-- Persistent mini player, shown once music unlocked -->
+<div id="mini-player" class="mini-player">
+  <button id="mini-toggle" class="mini-toggle" aria-label="Play or pause">
+    <span class="mini-icon" id="mini-icon">❚❚</span>
+  </button>
+  <div class="mini-meta">
+    <p class="mini-title" id="mini-title">—</p>
+    <p class="mini-artist" id="mini-artist">—</p>
+  </div>
+</div>
+
+<audio id="audio-player" preload="none"></audio>
+
+<script src="config.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
